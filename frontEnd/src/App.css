@@ -1,0 +1,91 @@
+ @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-base: #0a0a0f;
+  --bg-surface: #111118;
+  --bg-elevated: #18181f;
+  --bg-hover: #1e1e28;
+  --border: rgba(255,255,255,0.06);
+  --border-bright: rgba(255,255,255,0.12);
+  --accent-gold: #c9a84c;
+  --accent-gold-dim: rgba(201,168,76,0.15);
+  --accent-gold-glow: rgba(201,168,76,0.3);
+  --accent-teal: #2dd4bf;
+  --accent-teal-dim: rgba(45,212,191,0.12);
+  --text-primary: #f0ede8;
+  --text-secondary: #8a8799;
+  --text-muted: #4a4859;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+* {
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-base);
+  overflow: hidden;
+}
+
+.app {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--bg-base);
+  position: relative;
+}
+
+/* Ambient background effect */
+.app::before {
+  content: '';
+  position: fixed;
+  top: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(201,168,76,0.04) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.app::after {
+  content: '';
+  position: fixed;
+  bottom: -200px;
+  left: 100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(45,212,191,0.03) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* LIGHT THEME */
+.app.light {
+  --bg-base: #f5f4f0;
+  --bg-surface: #eeecea;
+  --bg-elevated: #e5e3de;
+  --bg-hover: #dddad4;
+  --border: rgba(0,0,0,0.07);
+  --border-bright: rgba(0,0,0,0.12);
+  --text-primary: #1a1814;
+  --text-secondary: #5a5650;
+  --text-muted: #9a9690;
+  --accent-gold-dim: rgba(160,110,30,0.1);
+  --accent-gold-glow: rgba(160,110,30,0.2);
+}
+
+.app.light * {
+  color: var(--text-primary);
+}
