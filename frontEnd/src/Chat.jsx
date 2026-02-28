@@ -1,4 +1,4 @@
- import { useContext, useEffect, useRef } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import { MyContext } from './myContext.jsx';
 
 function AiLoader() {
