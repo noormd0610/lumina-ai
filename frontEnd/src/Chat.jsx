@@ -1,6 +1,6 @@
  import { useContext, useEffect, useRef } from 'react';
 import { MyContext } from './myContext.jsx';
-import AiLoader from './AiLoader.jsx';
+import AiLoader from './Ailoader.jsx';
 
 function formatMessage(text) {
   const lines = text.split('\n').filter(line => line.trim() !== '');
