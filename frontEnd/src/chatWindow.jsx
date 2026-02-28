@@ -25,7 +25,8 @@ function ChatWindow() {
         };
 
         try {
-            const response = await fetch("http://127.0.0.1:3000/api/chats", options);
+            
+            const response = await fetch( "https://lumina-ai-backend.onrender.com/api/chats", options);
             const res = await response.json();
             setMessages(prev => [...prev, { role: "assistant", content: res.reply }]);
         } catch (e) {

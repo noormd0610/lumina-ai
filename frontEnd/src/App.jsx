@@ -30,7 +30,7 @@ function App() {
 
   // Fetch all threads on load
   useEffect(() => {
-    fetch("http://127.0.0.1:3000/api/threads")
+    fetch( "https://lumina-ai-backend.onrender.com/api/threads")
       .then(res => res.json())
       .then(data => setThreads(data))
       .catch(err => console.log("Error fetching threads:", err));
